@@ -241,14 +241,20 @@ nav{
   z-index:4;
   pointer-events:none;
 
-  background-image:url("https://pragmatik.ca/femme.png");
+  background-image:
+    radial-gradient(
+      ellipse at 45% 50%,
+      rgba(30,50,22,.22) 0%,
+      rgba(30,50,22,.08) 45%,
+      transparent 75%
+    ),
+    url("https://pragmatik.ca/femme.png");
+
   background-size:cover;
   background-position:center 28%;
   background-repeat:no-repeat;
 
-  /* Fusion plus naturelle */
   opacity:.95;
-  mix-blend-mode:soft-light;
 
   /* Masque beaucoup plus doux */
   mask-image:
@@ -279,24 +285,6 @@ nav{
     blur(.4px);
 
   transform:scale(1.03);
-}
-
-/* Overlay de fusion */
-.hero-woman::after{
-  content:'';
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(
-      ellipse 60% 70% at 45% 50%,
-      rgba(30,50,22,.22) 0%,
-      rgba(30,50,22,.08) 45%,
-      transparent 75%
-    );
-
-  mix-blend-mode:soft-light;
-  pointer-events:none;
 }
 
 /* ── SECTIONS ─────────────────────────────────── */
